@@ -11,7 +11,7 @@ export default function NavBar() {
                     <a href="/">
                         <img src="../assets/images/logo1.png" alt="" /></a>
                 
-                <Link to="/">Home </Link>
+                <Link to="/" exact="true">Home </Link>
                 <Link to="/productos">Lista de Productos </Link>
                 <Link to="/categoriasProductos">Lista de Categorias </Link>
                 <Link to="/lastProduct">Ultimo Producto Creado </Link>

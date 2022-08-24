@@ -1,8 +1,5 @@
 export default function Total({titulo, valor}) {
-    // cambiarFondo(){
-    //     document.querySelector(".totales").style.backgroundColor = "grey"
-    // }
-
+ 
     return (
         <>
         <div>

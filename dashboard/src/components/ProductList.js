@@ -1,24 +1,36 @@
-import React, {Component} from "react"
+import React, {useState, useEffect} from "react";
 
-class ProductList extends Component {
-    constructor(props){
-        super(props);
-            this.state = {
-                product: {}
-            }
-    }
 
-    
-    componentDidMount(){
+function ProductList()  {
+    const [productos, setProductos] = useState([])
+    useEffect( ()=>{
         fetch('/api/products')
-        .then (res => res.json())
-        .then (data => {
-            console.log(data)
-        })
-        
-    }
-  
-    render(){
+         .then (res => res.json())
+         .then (data => {
+            setProductos(data.productos)
+         })
+         .catch( err => console.log(err))
+    }, [productos])
+    return (
+        <>
+        <h5>cargando...</h5>
+        { 
+            productos.map((producto, i) => {
+                return <li key={i}>{producto.name}</li>
+            })
+         }
+        </>
+    )
+}
+    
+    // componentDidMount(){
+    //     fetch('/api/products')
+    //     .then (res => res.json())
+    //     .then (data => {
+    //         this.state.product = data.productos
+    //         console.log(data.productos)
+    //     })
+    // }
         // let contenido;
         // if(this.state.product == ""){
         //     contenido = <p>Cargando Lista de Productos...</p>
@@ -32,13 +44,8 @@ class ProductList extends Component {
         //     )
         // }
 
-        return (
-            <>
-            <h5>cargando...</h5>
-            </>
-        )
-    }
-}
+       
+
 export default ProductList
 
 // export default function ProductList(){
