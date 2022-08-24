@@ -1,8 +1,8 @@
 import React from 'react';
 
 import TotalProductos from './TotalProductos';
-
-
+import TotalUsuarios from './TotalUsuarios';
+import UltimoUsuario from './UltimoUsuario';
 
 function Home(){
     return(
@@ -11,7 +11,8 @@ function Home(){
             <p>Esto es un parrafo</p>       
         
         <TotalProductos />
-   
+        <TotalUsuarios />
+        <UltimoUsuario/>
         </div>
     )
 }
