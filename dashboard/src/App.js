@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Navbar from "./components/navBar";
+import ProductsList from "./components/ProductsList";
+import UsersList from "./components/UsersList";
+import Home from "./components/Home"
+import ProductsId from "./components/ProductsId";
+import UserId from "./components/UserId";
+import { BrowserRouter as Router, Route, Switch, Link} from "react-router-dom";
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   return (
+    <Router>
+     <div className="container"> 
+      <Navbar brand="Dashboard Cafe Arte "/>
+     <div className="btn-group mt-5">
+      <div>
+      <Link to="/" className="btn btn-dark m-2">Home</Link>
+      <Link to="/ProductsList" className="btn btn-dark m-2">Lista de Productos</Link>
+      <Link to="/UsersList" className="btn btn-dark m-2">Lista de Usuarios</Link>
+      </div>
     </div>
+       <Switch>
+           <Route path="/" exact>
+            <Home/>
+           </Route>
+           <Route path="/ProductsList/:id">
+            <ProductsId/>
+           </Route>
+           <Route path="/ProductsList" exact>
+            <ProductsList/>
+           </Route>
+           <Route path="/UsersList" exact>
+            <UsersList/>
+           </Route>
+           <Route path="/UsersList/:id">
+            <UserId/>
+           </Route>
+       </Switch>
+       
+     </div>
+    </Router>
+    
+ 
   );
-}
+  }
 
 export default App;
