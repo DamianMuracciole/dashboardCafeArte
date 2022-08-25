@@ -1,7 +1,10 @@
+import { Route } from 'react-router-dom'
 import Card from './Card'
 import UltimoUsuario from './UltimoUsuario'
-import ProductsList from './ProductsList'
+
 import Categorias from './Categorias'
+import CardProductsList from './CardProductsList'
+import CardUsersList from './CardUsersList'
 
 
 export default function ContentMiddle(){
@@ -22,11 +25,8 @@ export default function ContentMiddle(){
             
             </Card>
 
-            <Card 
-            size={12}
-            title="Listado de Productos">
-                <ProductsList/>
-            </Card>
+            <Route path="/products-list" component={CardProductsList} />
+            <Route path="/users-list" component={CardUsersList}/>
             
             
         </div>
