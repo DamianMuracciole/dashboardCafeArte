@@ -4,7 +4,7 @@ import ProductsList from './ProductsList'
 export default function CardProductsList() {
     return(
         <Card 
-            size={12}
+            size={18}
             title="Listado de Productos">
             <ProductsList/>
         </Card>

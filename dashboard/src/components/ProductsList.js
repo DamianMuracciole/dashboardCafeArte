@@ -53,7 +53,7 @@ function Productos(props){
 
 
     return(
-        <div style={({height: 400, width:'100%'})}>
+        <div style={({height: 400, width:1200})}>
             <DataGrid
                 rows={tableData}
                 columns={columns}

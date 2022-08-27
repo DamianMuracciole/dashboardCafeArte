@@ -34,6 +34,22 @@ function SideBar() {
 					<span>Paginas</span>
 				</a> */}
 			</li>
+
+			{/* Categorias */}
+			<li className="nav-item">
+				<Link className="nav-link" to="/products-categorias"><span>Productos Por Categoria</span></Link>
+				{/* <a className="nav-link" href="/">
+					<i className="fas fa-fw fa-table"></i>
+					<span>Tables</span></a> */}
+			</li>
+
+			{/* Ultimo Usuario */}
+			<li className="nav-item">
+				<Link className="nav-link" to="/users-last"><span>Ultimo Usuario</span></Link>
+				{/* <a className="nav-link" href="/">
+					<i className="fas fa-fw fa-table"></i>
+					<span>Tables</span></a> */}
+			</li>
 			
 			<li className="nav-item">
 				<Link className="nav-link" to="/products-list"><span>Lista de Productos</span></Link>

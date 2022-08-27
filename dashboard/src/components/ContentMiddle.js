@@ -1,30 +1,18 @@
 import { Route } from 'react-router-dom'
-import Card from './Card'
-import UltimoUsuario from './UltimoUsuario'
-
-import Categorias from './Categorias'
 import CardProductsList from './CardProductsList'
 import CardUsersList from './CardUsersList'
+import CardCategorias from './CardCategorias'
+import CardLastUser from './CardLastUser'
 
 
 export default function ContentMiddle(){
     return(
         
-        <div className="row">
-           <Card title="Ultimo Usuario Creado">
-                <div className="text-center">
-                    <UltimoUsuario/>
-                    </div>
-            
-            </Card>
+        <div className="row col-lg-6 mb-6">
+           
 
-            <Card title="Productos por Categorias">
-                <div className="text-center">
-                    <Categorias/>
-                    </div>
-            
-            </Card>
-
+           <Route path="/users-last" component={CardLastUser} />
+            <Route path="/products-categorias" component={CardCategorias} />
             <Route path="/products-list" component={CardProductsList} />
             <Route path="/users-list" component={CardUsersList}/>
             

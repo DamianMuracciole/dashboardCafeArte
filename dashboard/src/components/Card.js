@@ -12,7 +12,7 @@ const Card = ({ title, children, size=6, changeBackground }) => {
 
     
     return(
-        <div className={`col-lg-${size} mb-4`}>
+        <div className={`col-lg-${size} mb-6`}>
             <div className="card shadow mb-4">
                 <div className="card-header py-3">
                     <h5 onMouseOver={changeBackkground} className="m-0 font-weight-bold text-gray-800">{title}</h5>
