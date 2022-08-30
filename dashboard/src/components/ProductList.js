@@ -10,15 +10,22 @@ function ProductList()  {
             setProductos(data.productos)
          })
          .catch( err => console.log(err))
-    }, [productos])
+    }, [])
+
+    let contenido;
+
+    if(!productos){
+       contenido = <h5>cargando...</h5>
+    } else { 
+          contenido=  productos.map((producto, i) => {
+                return <li key={i}>{producto.name} {producto.price} </li>
+            })
+         
+    }
     return (
         <>
-        <h5>cargando...</h5>
-        { 
-            productos.map((producto, i) => {
-                return <li key={i}>{producto.name}</li>
-            })
-         }
+        {contenido}
+        
         </>
     )
 }

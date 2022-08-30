@@ -46,6 +46,10 @@
 	height: 75px;
 	padding: 10px;
 }
+.topBar {
+  display: flex;
+  justify-content: space-between;
+}
 
 
 /*-----   FOOTER   -----*/
