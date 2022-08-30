@@ -1,11 +1,11 @@
-import UsersList from '../Pages/UsersList'
+import UsersList from './UsersList'
 import Card from './Card'
 
 
 export default function CardUsersList() {
     return(
         <Card 
-            size={12}
+            size={18}
             title="Listado de Usuarios">
             <UsersList/>
         </Card>

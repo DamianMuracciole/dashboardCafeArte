@@ -7,7 +7,7 @@ function SideBar() {
     
     return (                   
 		<div>
-		<ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
+		<ul className="navbar-nav bg-gradient sidebar sidebar-dark accordion" id="accordionSidebar">
 			
 			<a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
 				<div className="sidebar-brand-icon">

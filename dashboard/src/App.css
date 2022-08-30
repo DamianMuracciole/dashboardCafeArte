@@ -40,6 +40,10 @@
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
 }
 
+#accordionSidebar{
+  background-color:rgb(54, 21, 0)
+}
+
 *,
 ::after,
 ::before {
@@ -4989,6 +4993,8 @@ input[type=submit].btn-block {
 .accordion>.card .card-header {
   margin-bottom: -1px
 }
+
+
 
 .breadcrumb {
   display: flex;
