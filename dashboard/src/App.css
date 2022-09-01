@@ -44,6 +44,10 @@
   background-color:rgb(54, 21, 0)
 }
 
+#card-color{
+  color:rgb(54, 21, 0)
+}
+
 *,
 ::after,
 ::before {

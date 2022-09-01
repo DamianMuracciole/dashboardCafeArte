@@ -35,7 +35,7 @@ function UsersList(props){
             <DataGrid
                 rows={tableData ? tableData : <CircularProgress />}
                 columns={columns}
-                pageSize={5}
+                pageSize={9}
                 checkboxSelection
             />           
         </div>

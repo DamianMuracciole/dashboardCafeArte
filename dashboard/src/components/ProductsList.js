@@ -27,7 +27,7 @@ const columns = [
       format: (value) => value.toFixed(2),
     },
     { field: 'status', headerName: 'Status', width: 80 },
-    { field: 'detail', headerName: 'Detalle', width: 800 },
+    { field: 'detail', headerName: 'Detalle', width: 1200 },
     { field: 'category', headerName: 'Categoria', width: 100 },
     { field: 'session', headerName: 'Sesion', width: 100 },
     { field: 'url', headerName: 'URL', width: 150 },
